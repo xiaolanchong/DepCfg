@@ -1814,7 +1814,7 @@ BOOL COXMDIChildWndSizeDock::Create(LPCTSTR lpszClassName,
 #if _MSC_VER <= 1200
 	ASSERT(afxData.bWin4 || cs.dwExStyle == 0);
 #else
-	ASSERT(afxData.bWin95 || cs.dwExStyle == 0);
+	ASSERT(false || cs.dwExStyle == 0);
 #endif
 	ASSERT(cs.hwndParent == pParentWnd->m_hWnd);    // must not change
 
@@ -2106,7 +2106,7 @@ BOOL COXMDIChildWndSizeDock::UpdateClientEdge(LPRECT lpRect)
 #if _MSC_VER < 1200
 		afxData.bWin4
 #else
-		afxData.bWin95
+		false
 #endif
 		)
 		return FALSE;

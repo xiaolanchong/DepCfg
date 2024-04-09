@@ -13,8 +13,8 @@ using namespace Gdiplus;
 #undef max
 #undef min
 
-#include <boost/shared_ptr.hpp>
-#include <boost/any.hpp>
+#include <memory>
+#include <any>
 #include <vector>
 
 
@@ -71,7 +71,7 @@ private:
 	{
 		CString					m_Name;
 		PropertyObserver*		m_Observer;
-		boost::shared_ptr<CWnd> m_Control;
+		std::shared_ptr<CWnd> m_Control;
 
 
 		Item(){}

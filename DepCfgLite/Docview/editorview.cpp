@@ -11,8 +11,6 @@
 #include "../../common/item/ProjectDB.h"
 #include "../../common/utility/ToolTipWnd.h"
 
-using boost::shared_ptr;
-
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #undef THIS_FILE

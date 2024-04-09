@@ -70,6 +70,7 @@ inline int GetAddrInfo( LPCTSTR , LPCTSTR , void* ,  void* )
 #include <../src/mfc/oleimpl2.h>
 
 #include <algorithm>
+#include <memory>
 
 using std::min;
 using std::max;
@@ -78,7 +79,9 @@ using std::max;
 #pragma  warning(disable : 4290)
 #endif
 
+#ifdef ORWELL_DB
 #include "../../../DBBridge/trunk/DBBridge.h"
+#endif
 
 // SAFE macro
 #ifndef SAFE_RELEASE

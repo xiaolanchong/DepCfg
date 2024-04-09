@@ -9,13 +9,15 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
+#ifdef ORWELL_CAM
 #include "..\..\..\Events\trunk\Events.h"
+#endif
 
-//#include "..\DepCfg\Include\DepCfgWnd.h"
 #include "DepCfgView.h"
 
-//#include "..\DepCfg\sysstate\sysstate.h"
+#ifdef ORWELL_CAM
 using namespace Elvees::Win32;
+#endif
 
 class CMainFrame : public CFrameWnd, private ITeleCallback
 {
@@ -39,10 +41,12 @@ public:
 
 // Implementation
 
+#ifdef ORWELL_CAM
 	static void __cdecl CallbackProc(
 	EOrwEvent eventID,    // see above
 	void *pData,          // event specific data
-	long datalen);  
+	long datalen); 
+#endif
 	
 	static		CMainFrame * pThis; 	
 public:

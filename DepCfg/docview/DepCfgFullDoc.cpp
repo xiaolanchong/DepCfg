@@ -1352,7 +1352,7 @@ void CDepCfgFullDoc::OnFileDBSave()
 try
 {
 	if( !Verify() ) return;
-	boost::shared_ptr< DepCfg::IDBSerializer > pInt = 
+	std::shared_ptr< DepCfg::IDBSerializer > pInt = 
 		DepCfg::CreateInternalInterface<DepCfg::IDBSerializer>( DBSERIALIZER_INTERFACE );
 	
 	std::vector<LogicReport::Cluster> Clusters;
@@ -1389,7 +1389,7 @@ try
 	
 	DeleteContents();
 
-	boost::shared_ptr< DepCfg::IDBSerializer > pInt = 
+	std::shared_ptr< DepCfg::IDBSerializer > pInt = 
 		DepCfg::CreateInternalInterface<DepCfg::IDBSerializer>( DBSERIALIZER_INTERFACE );
 
 	std::vector<BYTE> BinArr;

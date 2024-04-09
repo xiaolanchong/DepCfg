@@ -17,7 +17,6 @@
 
 #include  <gdiplus.h>
 using namespace Gdiplus;
-using boost::shared_ptr;
 
 //class CDepCfgDoc;
 

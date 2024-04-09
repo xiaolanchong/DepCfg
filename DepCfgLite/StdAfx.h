@@ -68,12 +68,16 @@ inline  int GetAddrInfo( LPCTSTR , LPCTSTR , void* ,  void* )
 
 #include <vector>
 #include <exception>
-#include <boost/shared_ptr.hpp>
+#include <memory>
 
 #include "res\resource.h"
 
+#if ORWELL_DB
 #include "../../../RecogSvr/trunk/sysstate.h"
 #include "../../../DBBridge/trunk/DBBridge.h"
+#else
+#include "../Common/sysstate.h"
+#endif
 
 #if _MSC_VER > 1200
 #pragma  warning(disable : 4290)

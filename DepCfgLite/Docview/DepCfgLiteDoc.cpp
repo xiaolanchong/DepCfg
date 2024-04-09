@@ -76,7 +76,7 @@ BOOL	CDepCfgLiteDoc::Load( LPCWSTR path, DWORD TimeOutSec )
 bool	CDepCfgLiteDoc::LoadFromDB(CStringW sConnectionString, DWORD TimeOutSec)
 try
 {
-	boost::shared_ptr< DepCfg::IDBSerializer > pInt = 
+	std::shared_ptr< DepCfg::IDBSerializer > pInt = 
 		DepCfg::CreateInternalInterface<DepCfg::IDBSerializer>( DBSERIALIZER_INTERFACE );
 
 	std::wstring sCS( sConnectionString.IsEmpty() ? L"" : (LPCWSTR)sConnectionString );
@@ -129,7 +129,7 @@ void	CDepCfgLiteDoc::DeleteItems(const std::set<DWORD> & Items)
 
 BOOL	CDepCfgLiteDoc::ParseState( void* pData )
 {
-	boost::shared_ptr< DepCfg::IResourceLoader > p = 
+	std::shared_ptr< DepCfg::IResourceLoader > p = 
 		DepCfg::CreateInternalInterface< DepCfg::IResourceLoader >(
 #ifdef DEPCFGLITE
 		RESOURCE_DLL_INTERFACE
@@ -176,7 +176,7 @@ BOOL	CDepCfgLiteDoc::ParseState( void* pData )
 			{
 				m_Ticks[ cs->GetID() ] = 0 ;
 				DWORD OldState = cs->m_dwNetState.Get();
-				cs->m_dwNetState = pCompState->sBattery;
+				((ComputerSettings&)*cs).m_dwNetState = pCompState->sBattery;
 				Result = TRUE;
 
 				CString strState = p->LoadCompState( pCompState->sBattery );
@@ -262,7 +262,7 @@ void	CDepCfgLiteDoc::InitTicks()
 	for( ;cs != m_DB.m_Computers.end(); ++cs )
 	{
 		m_Ticks[ cs->GetID() ] = 0 ;
-		cs->m_dwNetState = sBattery_offline;
+		((ComputerSettings&)*cs).m_dwNetState = sBattery_offline;
 	}
 
 	std::set<MasterSettings>::iterator mi = m_DB.m_Masters.begin();

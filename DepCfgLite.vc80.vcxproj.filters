@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2981b22-f935-4810-8dc1-b950dca6f634}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{57401c01-133e-401a-8a1f-70fd9deece33}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{39a16a5f-eb68-4650-bcac-5e845b93f562}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{5a0abc65-48c2-4a0a-8dbe-4a5802f0163f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Item">
+      <UniqueIdentifier>{ce6465af-cce2-42f2-a95b-33250efeab49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Utility">
+      <UniqueIdentifier>{4d9a3556-c395-45b7-9d92-173303d6fb89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\DocView">
+      <UniqueIdentifier>{b8b9a904-e2da-4937-9c7f-520e4a9ed868}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\DocView\FakeCommon">
+      <UniqueIdentifier>{9036c039-76ac-45b9-ad6d-effbda5b82f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Custom">
+      <UniqueIdentifier>{5555dab8-d7a9-42be-8ebf-420e6a19b61a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DB">
+      <UniqueIdentifier>{dded88fd-52b4-4132-9809-4f0a8c7b744b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{ba7a3618-731b-41a3-be7d-96348190596d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DepCfgLite\DepCfgLite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfgLite\DepCfgWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfgLite\misc\DepInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfgLite\misc\DllRes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfgLite\StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\item\GuiCamera.cpp">
+      <Filter>Common\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\item\GuiCommutator.cpp">
+      <Filter>Common\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\item\GuiComputer.cpp">
+      <Filter>Common\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\item\GuiConnection.cpp">
+      <Filter>Common\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\item\GuiMaster.cpp">
+      <Filter>Common\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\item\GuiRect.cpp">
+      <Filter>Common\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\item\LogicDB.cpp">
+      <Filter>Common\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\item\PointDetect.cpp">
+      <Filter>Common\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\item\ProjectDB.cpp">
+      <Filter>Common\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\utility\Helper.cpp">
+      <Filter>Common\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\utility\ToolTipWnd.cpp">
+      <Filter>Common\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\docview\DepCfgDoc.cpp">
+      <Filter>Common\DocView</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\docview\PhysicView.cpp">
+      <Filter>Common\DocView</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfgLite\Docview\editorview.cpp">
+      <Filter>Common\DocView\FakeCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfgLite\Docview\DepCfgLiteDoc.cpp">
+      <Filter>Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfgLite\Docview\PhysicLiteView.cpp">
+      <Filter>Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfgLite\db\DBSerializer.cpp">
+      <Filter>DB</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfgLite\db\OleDBConnection.cpp">
+      <Filter>DB</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfgLite\misc\ResourceLoader.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DepCfgLite\res\EN\DepCfgLite.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\DepCfgWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfgLite\interface\DepInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfgLite\misc\DllRes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfgLite\interface\IDBSerializer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfgLite\misc\interfaceEx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfgLite\res\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfgLite\StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TeleCallback.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\item\GuiCamera.h">
+      <Filter>Common\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\item\GuiComputer.h">
+      <Filter>Common\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\item\GuiConnection.h">
+      <Filter>Common\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\item\GuiMaster.h">
+      <Filter>Common\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\item\GuiRect.h">
+      <Filter>Common\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\item\PointDetect.h">
+      <Filter>Common\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\utility\Helper.h">
+      <Filter>Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\utility\RectF.h">
+      <Filter>Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\utility\ToolTipWnd.h">
+      <Filter>Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\utility\XMLParser.h">
+      <Filter>Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\docview\DepCfgDoc.h">
+      <Filter>Common\DocView</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\docview\physicview.h">
+      <Filter>Common\DocView</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfgLite\Docview\EditorView.h">
+      <Filter>Common\DocView\FakeCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfgLite\Docview\DepCfgLiteDoc.h">
+      <Filter>Custom</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfgLite\Docview\PhysicLiteView.h">
+      <Filter>Custom</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfgLite\db\DBAccessor.h">
+      <Filter>DB</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfgLite\db\DBHelper.h">
+      <Filter>DB</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfgLite\db\DBSerializer.h">
+      <Filter>DB</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfgLite\db\OleDBConnection.h">
+      <Filter>DB</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfgLite\interface\IResourceLoader.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfgLite\misc\ResourceLoader.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="DepCfgLite\res\EN\res\Info1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="DepCfgLite\DepCfgLite.def">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DepCfgLite\DepCfgLiteD.def">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DepCfgLite\DepCfgLiteU.def">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DepCfgLite\DepCfgLiteUD.def">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Unicode Debug|Win32">
+      <Configuration>Unicode Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode Release|Win32">
+      <Configuration>Unicode Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectName>DepCfgLite</ProjectName>
+    <ProjectGuid>{8D01006D-F3E0-4ED8-B62E-C6F7FB7C798D}</ProjectGuid>
+    <RootNamespace>DepCfgLite</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.34322.80</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
+    <OutDir>.\_DepCfgLite_DebugU\</OutDir>
+    <IntDir>.\_DepCfgLite_DebugU\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
+    <OutDir>.\_DepCfgLite_ReleaseU\</OutDir>
+    <IntDir>.\_DepCfgLite_ReleaseU\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
+    <CustomBuildStep>
+      <Message>Performing Custom Build Step on $(TargetPath)</Message>
+      <Command>copy "$(TargetPath)" "BIN\Debug\$(TargetFileName)"
+</Command>
+      <Outputs>BIN/Debug/$(TargetFileName);%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\_DepCfgLite_DebugU/DepCfgLite.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>Common;DepCfgLite;../../../../3rd_party/boost_1_33_1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;_AFXEXT;DEPCFGLITE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\_DepCfgLite_DebugU/DepCfgLite.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\_DepCfgLite_DebugU/</AssemblerListingLocation>
+      <ObjectFileName>.\_DepCfgLite_DebugU/</ObjectFileName>
+      <ProgramDataBaseFileName>.\_DepCfgLite_DebugU/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;_UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0419</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>gdiplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)DepCfgLite.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\DepCfgLite\DepCfgLiteUD.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\_DepCfgLite_DebugU/DepCfgLiteud.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>.\_DepCfgLite_DebugU/DepCfgLiteud.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
+    <CustomBuildStep>
+      <Command>copy $(TargetPath) ..\..\BIN\Release\$(TargetFileName)
+</Command>
+      <Outputs>..\..\BIN\Release\$(TargetFileName);%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\_DepCfgLite_ReleaseU/DepCfgLite.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>Common;DepCfgLite;../../../../3rd_party/boost_1_33_1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;_AFXEXT;DEPCFGLITE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\_DepCfgLite_ReleaseU/DepCfgLite.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\_DepCfgLite_ReleaseU/</AssemblerListingLocation>
+      <ObjectFileName>.\_DepCfgLite_ReleaseU/</ObjectFileName>
+      <ProgramDataBaseFileName>.\_DepCfgLite_ReleaseU/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0419</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>gdiplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)DepCfgLiteu.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\DepCfgLite\DepCfgLiteU.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\_DepCfgLite_ReleaseU/DepCfgLiteu.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>.\_DepCfgLite_ReleaseU/DepCfgLiteu.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\docview\DepCfgDoc.cpp" />
+    <ClCompile Include="Common\docview\PhysicView.cpp" />
+    <ClCompile Include="Common\item\GuiCamera.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">_DEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">NDEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="Common\item\GuiCommutator.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">_DEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">NDEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="Common\item\GuiComputer.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">_DEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">NDEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="Common\item\GuiConnection.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">_DEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">NDEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="Common\item\GuiMaster.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">_DEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">NDEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="Common\item\GuiRect.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">_DEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">NDEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="Common\item\LogicDB.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">_DEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">NDEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="Common\item\PointDetect.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">_DEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">NDEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="Common\item\ProjectDB.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">_DEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">NDEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="Common\utility\Helper.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">_DEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">NDEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="Common\utility\ToolTipWnd.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">_DEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">NDEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="DepCfgLite\db\DBSerializer.cpp" />
+    <ClCompile Include="DepCfgLite\db\OleDBConnection.cpp" />
+    <ClCompile Include="DepCfgLite\DepCfgLite.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">_DEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">NDEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="DepCfgLite\DepCfgWnd.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">_DEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">NDEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="DepCfgLite\Docview\DepCfgLiteDoc.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">_DEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">NDEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="DepCfgLite\Docview\editorview.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">_DEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">NDEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="DepCfgLite\Docview\PhysicLiteView.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">_DEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">NDEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="DepCfgLite\misc\DepInterface.cpp" />
+    <ClCompile Include="DepCfgLite\misc\DllRes.cpp" />
+    <ClCompile Include="DepCfgLite\misc\ResourceLoader.cpp" />
+    <ClCompile Include="DepCfgLite\StdAfx.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">_DEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">NDEBUG;_UNICODE;WIN32;_WINDOWS;_WINDLL;_AFXDLL;_AFXEXT;DEPCFGLITE</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="DepCfgLite\DepCfgLite.def">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="DepCfgLite\DepCfgLiteD.def">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="DepCfgLite\DepCfgLiteU.def">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="DepCfgLite\DepCfgLiteUD.def">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DepCfgLite\res\EN\DepCfgLite.rc">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">_DEBUG;_AFXDLL;_UNICODE</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">DepCfgLite\res\EN;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">NDEBUG;_AFXDLL</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">DepCfgLite\res\EN;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\docview\DepCfgDoc.h" />
+    <ClInclude Include="Common\docview\physicview.h" />
+    <ClInclude Include="Common\item\GuiCamera.h" />
+    <ClInclude Include="Common\item\GuiComputer.h" />
+    <ClInclude Include="Common\item\GuiConnection.h" />
+    <ClInclude Include="Common\item\GuiMaster.h" />
+    <ClInclude Include="Common\item\GuiRect.h" />
+    <ClInclude Include="Common\item\PointDetect.h" />
+    <ClInclude Include="Common\utility\Helper.h" />
+    <ClInclude Include="Common\utility\RectF.h" />
+    <ClInclude Include="Common\utility\ToolTipWnd.h" />
+    <ClInclude Include="Common\utility\XMLParser.h" />
+    <ClInclude Include="DepCfgLite\db\DBAccessor.h" />
+    <ClInclude Include="DepCfgLite\db\DBHelper.h" />
+    <ClInclude Include="DepCfgLite\db\DBSerializer.h" />
+    <ClInclude Include="DepCfgLite\db\OleDBConnection.h" />
+    <ClInclude Include="DepCfgLite\Docview\DepCfgLiteDoc.h" />
+    <ClInclude Include="DepCfgLite\Docview\EditorView.h" />
+    <ClInclude Include="DepCfgLite\Docview\PhysicLiteView.h" />
+    <ClInclude Include="DepCfgLite\interface\DepInterface.h" />
+    <ClInclude Include="DepCfgLite\interface\IDBSerializer.h" />
+    <ClInclude Include="DepCfgLite\interface\IResourceLoader.h" />
+    <ClInclude Include="DepCfgLite\misc\DllRes.h" />
+    <ClInclude Include="DepCfgLite\misc\interfaceEx.h" />
+    <ClInclude Include="DepCfgLite\misc\ResourceLoader.h" />
+    <ClInclude Include="DepCfgLite\res\resource.h" />
+    <ClInclude Include="DepCfgLite\StdAfx.h" />
+    <ClInclude Include="include\DepCfgWnd.h" />
+    <ClInclude Include="include\TeleCallback.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="DepCfgLite\res\EN\res\Info1.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

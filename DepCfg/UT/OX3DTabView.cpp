@@ -284,7 +284,7 @@ BOOL COX3DTabViewContainer::InsertPage(const int nIndex,
 	DWORD dwStyle=AFX_WS_DEFAULT_VIEW;
 	if(
 #if _MSC_VER > 1200
-		afxData.bWin95
+		false
 #else
 		afxData.bWin4 
 #endif

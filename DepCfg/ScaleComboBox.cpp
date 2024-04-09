@@ -137,7 +137,7 @@ DWORD	CScaleComboBox::GetDesireWidth()
 		int z = GetLBText(i, szBuf);
 //		LPCTSTR szText = (LPCTSTR)GetItemData( i );
 		pDC->DrawText( szBuf, z, rcItem,  DT_CENTER|DT_SINGLELINE|DT_VCENTER|DT_CALCRECT );
-		dwWidth = std::_cpp_max<DWORD>( rcItem.Width(), dwWidth );
+		dwWidth = std::max<DWORD>( rcItem.Width(), dwWidth );
 	}
 	//NOTENOTE: add gap in 20px but hack
 	//FIXME: 

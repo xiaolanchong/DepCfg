@@ -49,13 +49,17 @@ CMainFrame::CMainFrame()
 	m_wndView = (CDepCfgView*) RUNTIME_CLASS( CDepCfgView )->CreateObject() ;
 
 	pThis = this;
+#ifdef ORWELL_CAM
 	bool z = EventStreamConnect( &CallbackProc );
 	ASSERT(z);
+#endif
 }
 
 CMainFrame::~CMainFrame()
 {
+#ifdef ORWELL_CAM
 	EventStreamDisconnect();
+#endif
 }
 
 int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
@@ -184,6 +188,7 @@ void CMainFrame::OnFitto()
 	m_wndView->FitToSize();
 }
 
+#ifdef ORWELL_CAM
 void __cdecl CMainFrame::CallbackProc(EOrwEvent eventID,  void *pData, long datalen)
 {
 	if(eventID == EOrwEventInfo)
@@ -191,6 +196,7 @@ void __cdecl CMainFrame::CallbackProc(EOrwEvent eventID,  void *pData, long data
 		pThis->m_wndView->State( pData );
 	}
 }
+#endif
 
 void CMainFrame::OnFileOpen()
 {

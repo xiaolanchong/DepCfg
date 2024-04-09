@@ -404,7 +404,6 @@ void	CDepCfgDoc::DeleteItems(const std::set<DWORD> & Items)
 	DWORD dwID = *Items.begin();
 	std::set<DWORD> s ( m_DB.GetAllConnections(  dwID ) );
 
-	DWORD z1 = *s.begin();
 	s.insert( dwID );
 	m_DB.DeleteItems(s);
 	m_LogicDB.DeleteItem(s);
@@ -413,7 +412,7 @@ void	CDepCfgDoc::DeleteItems(const std::set<DWORD> & Items)
 
 CStringW	CDepCfgDoc::LoadStringInt( UINT nID )
 {
-	boost::shared_ptr< DepCfg::IResourceLoader > p = 
+	std::shared_ptr< DepCfg::IResourceLoader > p = 
 		DepCfg::CreateInternalInterface< DepCfg::IResourceLoader > (
 #ifdef DEPCFGLITE
 		RESOURCE_DLL_INTERFACE

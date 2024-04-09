@@ -110,7 +110,7 @@ void	DBSerializer::Connect(const std::wstring& sConStr)
 	sCS += _T(";User ID=OrwellSAdmin;Password=");
 	sCS += c_szPassword;
 #endif
-#else
+#elif defined(ORWELL_DB)
 
 	if( !sConStr.empty() ) 
 	{
@@ -131,6 +131,8 @@ void	DBSerializer::Connect(const std::wstring& sConStr)
 		throw DatabaseException("failed to get the connection string");
 	}
 	std::wstring sCS( Buf.begin(), Buf.end() );
+#else
+	std::wstring sCS;
 #endif
 	Open( sCS, false );
 }

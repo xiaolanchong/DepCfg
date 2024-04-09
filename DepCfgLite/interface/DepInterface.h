@@ -18,6 +18,7 @@
 //                                 struct DepInterface                                  //
 //======================================================================================//
 
+#include <stdexcept>
 
 
 namespace DepCfg
@@ -33,12 +34,12 @@ template<class T> struct ReleaseInterface
 
 extern "C" bool WINAPI CreateDepInterface(const wchar_t *pName, void **ppInterface);
 
-template< typename T >  boost::shared_ptr< T > CreateInternalInterface( const wchar_t* pIntID )
+template< typename T >  std::shared_ptr< T > CreateInternalInterface( const wchar_t* pIntID )
 {
 	T* pRawInt;
 	bool bCreateRes = DepCfg::CreateDepInterface( pIntID, (void**) &pRawInt);
 	if(!bCreateRes) throw std::runtime_error("Interface is not supported");
-	return boost::shared_ptr< T> ( pRawInt, DepCfg::ReleaseInterface<T>() );
+	return std::shared_ptr< T> ( pRawInt, DepCfg::ReleaseInterface<T>() );
 }
 
 

@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{197f5f27-bb5e-46b5-a9d1-22a2ddf6f97e}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{045573d7-398f-42ea-8eef-57a68d0b1af2}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{dae7bef3-9cbe-49f8-b26f-ba09e12f5246}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{8f9eb4cf-d013-4137-9716-c07e9709a70c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Item">
+      <UniqueIdentifier>{f736ad15-564c-4ec7-ad95-fd3924f29d84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Utility">
+      <UniqueIdentifier>{dc5b6511-a57a-46d7-adaf-176e390dfad3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Docview">
+      <UniqueIdentifier>{54e7603f-c197-430b-8ccc-4dcd3dc90ed5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dump">
+      <UniqueIdentifier>{172d612d-4ed5-4032-870c-279ff8c66d6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UT">
+      <UniqueIdentifier>{2fde3031-ca51-4db8-9eae-d1a2026815a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="docview">
+      <UniqueIdentifier>{454b78bc-79d4-4b42-a980-e70c5068def2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IPAddressEx">
+      <UniqueIdentifier>{17983fb5-6a2c-4f85-90c6-29f87b83d2db}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DepCfg\CameraProperty.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\ChangeProperty.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\CIPAddressEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\CJFlatComboBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\DepCfg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\DirDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\DragWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\ItemToolBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\Mysizeba.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\NumEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\PropertyListBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\ScaleComboBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\SettingsDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\item\GuiCamera.cpp">
+      <Filter>Common\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\item\GuiCommutator.cpp">
+      <Filter>Common\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\item\GuiComputer.cpp">
+      <Filter>Common\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\item\GuiConnection.cpp">
+      <Filter>Common\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\item\GuiMaster.cpp">
+      <Filter>Common\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\item\GuiRect.cpp">
+      <Filter>Common\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\item\LogicDB.cpp">
+      <Filter>Common\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\item\PointDetect.cpp">
+      <Filter>Common\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\item\ProjectDB.cpp">
+      <Filter>Common\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\utility\Helper.cpp">
+      <Filter>Common\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\utility\iniFile.cpp">
+      <Filter>Common\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\utility\ToolTipWnd.cpp">
+      <Filter>Common\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\docview\DepCfgDoc.cpp">
+      <Filter>Common\Docview</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\docview\EditorView.cpp">
+      <Filter>Common\Docview</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\docview\PhysicView.cpp">
+      <Filter>Common\Docview</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\dmpstuff\ExceptionAttacher.cpp">
+      <Filter>Dump</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\dmpstuff\ExceptionHandler.cpp">
+      <Filter>Dump</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\UT\OX3DTabView.cpp">
+      <Filter>UT</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\UT\OXBitmapMenu.cpp">
+      <Filter>UT</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\UT\OXBitmapMenuOrganizer.cpp">
+      <Filter>UT</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\UT\OXColorPickerCtrl.cpp">
+      <Filter>UT</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\UT\OXCoolToolBar.cpp">
+      <Filter>UT</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\UT\OXDragDockContext.CPP">
+      <Filter>UT</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\UT\OXEdit.cpp">
+      <Filter>UT</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\UT\OXFrameWndDock.CPP">
+      <Filter>UT</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\Ut\OXMaskedEdit.cpp">
+      <Filter>UT</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\UT\OXMDIFloatWnd.cpp">
+      <Filter>UT</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\UT\OXMenuBar.cpp">
+      <Filter>UT</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\UT\OXPopupBarCtrl.cpp">
+      <Filter>UT</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\UT\OXRectTracker.cpp">
+      <Filter>UT</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\UT\OXSizeCtrlBar.CPP">
+      <Filter>UT</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\UT\OXSizeDockBar.cpp">
+      <Filter>UT</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\UT\OXSizeToolBar.cpp">
+      <Filter>UT</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\UT\OXSplitterRect.cpp">
+      <Filter>UT</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\UT\OXSzMiniDockFrmWnd.cpp">
+      <Filter>UT</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\docview\DepCfgFullDoc.cpp">
+      <Filter>docview</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\docview\LogicView.cpp">
+      <Filter>docview</Filter>
+    </ClCompile>
+    <ClCompile Include="DepCfg\IPAddressEx\IPAddressWrapWnd.cpp">
+      <Filter>IPAddressEx</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DepCfg\res\en\DepCfg.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DepCfg\CameraProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\ChangeProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\CIPAddressEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\CJFlatComboBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\CRangeEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\DepCfg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\DirDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\DragWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\iniFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\ItemToolBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\ModuleVersion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\Mysizeba.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\NumEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\OXDockCtrlBarRes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\PropertyListBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\res\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\ScaleComboBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\SettingsDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Callback.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Exception.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\item\GuiCamera.h">
+      <Filter>Common\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\item\GuiCommutator.h">
+      <Filter>Common\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\item\GuiComputer.h">
+      <Filter>Common\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\item\GuiConnection.h">
+      <Filter>Common\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\item\GuiMaster.h">
+      <Filter>Common\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\item\GuiRect.h">
+      <Filter>Common\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\item\LogicDB.h">
+      <Filter>Common\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\item\PointDetect.h">
+      <Filter>Common\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\item\ProjectDB.h">
+      <Filter>Common\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\utility\Helper.h">
+      <Filter>Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\utility\RectF.h">
+      <Filter>Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\utility\ToolTipWnd.h">
+      <Filter>Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\utility\XMLParser.h">
+      <Filter>Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\docview\DepCfgDoc.h">
+      <Filter>Common\Docview</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\docview\EditorView.h">
+      <Filter>Common\Docview</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\docview\physicview.h">
+      <Filter>Common\Docview</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\dmpstuff\ExceptionHandler.h">
+      <Filter>Dump</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\docview\DepCfgFullDoc.h">
+      <Filter>docview</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\docview\LogicView.h">
+      <Filter>docview</Filter>
+    </ClInclude>
+    <ClInclude Include="DepCfg\IPAddressEx\IPAddressWrapWnd.h">
+      <Filter>IPAddressEx</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="DepCfg\res\en\DepCfg.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="DepCfg\res\en\DepCfgDoc.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="DepCfg\res\en\il_tabvi.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="DepCfg\res\en\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="DepCfg\res\en\toolbar1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DepCfg.reg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

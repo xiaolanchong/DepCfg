@@ -116,7 +116,8 @@ public:
 
 	virtual std::pair<bool, DWORD>	CanConnect		(DWORD dwID, DWORD dwSlot, PointF point) const	= 0;
 
-	virtual PointF					PointFromSlot	(DWORD dwSlot) const throw(SlotException) = 0;
+	// throw(SlotException)
+	virtual PointF					PointFromSlot	(DWORD dwSlot) const = 0;
 	virtual std::pair<bool, DWORD>	SlotFromPoint	(PointF point) const = 0;		// <-- need GAP!!!
 
 	virtual std::set<DWORD>		OnDeleteItem() const = 0;
@@ -131,7 +132,7 @@ class CGuiDB
 	friend class CDepCfgDoc;
 	friend class CDepCfgFullDoc;
 
-	typedef std::list< boost::shared_ptr<GuiItem> >  DBList_t ;
+	typedef std::list< std::shared_ptr<GuiItem> >  DBList_t ;
 
 	Zoom						m_Zoom;
 	mutable struct Cache
@@ -153,7 +154,7 @@ class CGuiDB
 	CDocument*					m_pDoc;
 	CLogicDB&					m_DB;
 
-	std::set< boost::shared_ptr<GuiItem> > m_CurItems;
+	std::set< std::shared_ptr<GuiItem> > m_CurItems;
 
 	PropertyCB*		m_pCB;				
 

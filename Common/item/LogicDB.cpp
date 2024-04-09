@@ -108,7 +108,7 @@ const ComputerSettings*	CLogicDB::GetComputer(DWORD dwID) const
 ComputerSettings*		CLogicDB::GetComputer(DWORD dwID)
 {
 	std::set<ComputerSettings>::iterator itr = m_Computers.find( ComputerSettings(dwID) );
-	return itr != m_Computers.end() ? &(*itr) : 0;
+	return itr != m_Computers.end() ? const_cast<ComputerSettings*>(&(*itr)) : 0;
 }
 
 const CommutatorSettings*	CLogicDB::GetCommutator(DWORD dwID) const
@@ -120,7 +120,7 @@ const CommutatorSettings*	CLogicDB::GetCommutator(DWORD dwID) const
 CommutatorSettings*		CLogicDB::GetCommutator(DWORD dwID)
 {
 	std::set<CommutatorSettings>::iterator itr = m_Commutators.find( CommutatorSettings(dwID) );
-	return itr != m_Commutators.end() ? &(*itr) : 0;
+	return itr != m_Commutators.end() ? const_cast<CommutatorSettings*>(&(*itr)) : 0;
 }
 
 const SlaveSettings*	CLogicDB::GetSlave(DWORD dwID) const
@@ -132,7 +132,7 @@ const SlaveSettings*	CLogicDB::GetSlave(DWORD dwID) const
 SlaveSettings*		CLogicDB::GetSlave(DWORD dwID)
 {
 	std::set<SlaveSettings>::iterator itr = m_Slaves.find( SlaveSettings(dwID) );
-	return itr != m_Slaves.end() ? &(*itr) : 0;
+	return itr != m_Slaves.end() ? const_cast<SlaveSettings*>(&(*itr)) : 0;
 }
 
 const MasterSettings*	CLogicDB::GetMaster(DWORD dwID) const
@@ -144,7 +144,7 @@ const MasterSettings*	CLogicDB::GetMaster(DWORD dwID) const
 MasterSettings*		CLogicDB::GetMaster(DWORD dwID)
 {
 	std::set<MasterSettings>::iterator itr = m_Masters.find( MasterSettings(dwID) );
-	return itr != m_Masters.end() ? &(*itr) : 0;
+	return itr != m_Masters.end() ? const_cast<MasterSettings*>( & (*itr)) : 0;
 }
 
 const Connection*	CLogicDB::GetConnection(DWORD dwID) const
@@ -156,7 +156,7 @@ const Connection*	CLogicDB::GetConnection(DWORD dwID) const
 Connection*		CLogicDB::GetConnection(DWORD dwID)
 {
 	std::set<Connection>::iterator itr = m_Connections.find( Connection(dwID) );
-	return itr != m_Connections.end() ? &(*itr) : 0;
+	return itr != m_Connections.end() ? const_cast<Connection*>(&(*itr)) : 0;
 }
 
 void	CLogicDB::AddComputer(const  ComputerSettings& cs)
@@ -474,13 +474,13 @@ void		CLogicDB::ShiftCommSlot(DWORD dwID, DWORD dwSlot, bool bFirstSlot)
 			itr->First == dwID					&& 
 			itr->FirstSlot > dwSlot ) 
 		{
-			--itr->FirstSlot;
+			--(const_cast<Connection&>(*itr)).FirstSlot;
 		}
 		else if((cms = GetCommutator( itr->Second ))	&& 
 				itr->Second == dwID						&& 
 				itr->SecondSlot > dwSlot ) 
 		{
-			--itr->SecondSlot;
+			--(const_cast<Connection&>(*itr)).SecondSlot;
 		}	
 	}
 }
@@ -516,7 +516,7 @@ MasterSettings*	CLogicDB::GetMasterFromCameraID(int nID)
 	for( ; itr != m_Masters.end(); ++itr  )
 	{
 		if( itr->m_dwCameraID.IsSet() &&  nID == itr->m_dwCameraID.Get())
-			return &(*itr);
+			return (MasterSettings*) & (*itr);
 	}	
 	return 0;
 }
@@ -527,7 +527,7 @@ SlaveSettings*	CLogicDB::GetSlaveFromCameraID(int nID)
 	for( ; itr != m_Slaves.end(); ++itr  )
 	{
 		if( itr->m_dwCameraID.IsSet() &&  nID == itr->m_dwCameraID.Get())
-			return &(*itr);
+			return (SlaveSettings*) & (*itr);
 	}	
 	return 0;	
 }

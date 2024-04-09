@@ -110,11 +110,11 @@ void	GuiCommutator::SetProperties(PropertyCB* pPropCB)
 	cp.SetProperties(  *cs );
 }
 
-void GuiCommutator::OnPropertyChange(CString Name, const boost::any& Value) 
+void GuiCommutator::OnPropertyChange(CString Name, const std::any& Value) 
 {
 	CCommutatorProperty cp( &m_DB, GetID(),  0, 0 );
 
-	CString val = boost::any_cast<CString>(Value);
+	CString val = std::any_cast<CString>(Value);
 	CommutatorSettings *cs = m_DB.GetCommutator( GetID() );
 
 	ASSERT( cs);
@@ -138,7 +138,7 @@ void	GuiCommutator::SetProperties(PropertyCB* pPropCB)
 
 }
 
-void GuiCommutator::OnPropertyChange(CString Name, const boost::any& Value) 
+void GuiCommutator::OnPropertyChange(CString Name, const std::any& Value) 
 {
 }
 

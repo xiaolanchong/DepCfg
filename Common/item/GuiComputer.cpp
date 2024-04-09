@@ -146,9 +146,9 @@ void	GuiComputer::SetProperties(PropertyCB* pPropCB)
 	pPropCB->SetEditProperty( LoadStringInt( IDS_PROP_COMPUTER_DNS_NAME ), Value, this);
 }
 
-void GuiComputer::OnPropertyChange(CString Name, const boost::any& Value) 
+void GuiComputer::OnPropertyChange(CString Name, const std::any& Value) 
 {
-	CString str = boost::any_cast<CString>(Value);
+	CString str = std::any_cast<CString>(Value);
 	ComputerSettings* itr = m_DB.GetComputer( GetID() );
 
 	CString strIP		= LoadStringInt( IDS_PROP_COMPUTER_IP ),

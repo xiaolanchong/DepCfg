@@ -226,7 +226,7 @@ void CPropertyListBox::OnSelchange()
 //	Invalidate();
 }
 
-struct Find1st : std::unary_function< CPropertyListBox::Item ,bool>
+struct Find1st
 {
 	CString m_Find;
 	Find1st(CString Find): m_Find(Find){}
@@ -543,7 +543,7 @@ void	CPropertyListBox::SetColorPicker( CString Name, COLORREF clDefault, Propert
 	else
 	{
 		CString str;
-		itr->m_Control = boost::shared_ptr<CWnd>(pPicker);
+		itr->m_Control = std::shared_ptr<CWnd>(pPicker);
 	}
 	Invalidate(FALSE);		
 }

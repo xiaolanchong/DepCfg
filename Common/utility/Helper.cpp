@@ -65,7 +65,7 @@ std::wstring	Convert(const std::string& str)
 std::string		ConvertA(LPCWSTR szStr)
 {
 	std::vector<char> buf;
-	int size = WideCharToMultiByte(CP_ACP, WC_COMPOSITECHECK, szStr, -1,  &buf[0], 0, 0, 0);
+	int size = WideCharToMultiByte(CP_ACP, WC_COMPOSITECHECK, szStr, -1,  nullptr, 0, 0, 0);
 	buf.resize(size);
 	WideCharToMultiByte(CP_ACP, WC_COMPOSITECHECK, szStr, -1,  &buf[0], size, 0, 0);
 	return std::string	( &buf[0] );

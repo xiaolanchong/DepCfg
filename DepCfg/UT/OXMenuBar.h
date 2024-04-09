@@ -231,9 +231,9 @@ public:
 	// --- Out : 
 	// --- Returns:	Handle to the menu that is used in the menu bar
 	// --- Effect : Retrieves handle to the menubar menu
-	HMENU GetMenu() const { 
+	CMenu* GetMenu() const { 
 		ASSERT(::IsWindow(GetSafeHwnd()));
-		return m_hMenu; 
+		return CMenu::FromHandle(m_hMenu); 
 	}
 
 

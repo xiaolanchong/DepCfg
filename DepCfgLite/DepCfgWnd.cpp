@@ -54,7 +54,7 @@ BOOL CDepCfgWnd::Create( DWORD dwStyle, CWnd* pParentWnd, UINT nID, CCreateConte
 	m_pList = &static_cast< CListView* >( GetPane( 1, 0 ) )->GetListCtrl();
 	m_pView = static_cast< CPhysicLiteView* >( GetPane( 0, 0 ) );
 
-	boost::shared_ptr< DepCfg::IResourceLoader > p = 
+	std::shared_ptr< DepCfg::IResourceLoader > p = 
 		DepCfg::CreateInternalInterface< DepCfg::IResourceLoader >(
 #ifdef DEPCFGLITE
 		RESOURCE_DLL_INTERFACE
@@ -160,7 +160,7 @@ void CDepCfgWnd::OnCamera(LONG id,          // camera id
                         LPCWSTR state     // new state
                         ) 
 {
-	boost::shared_ptr< DepCfg::IResourceLoader > p = 
+	std::shared_ptr< DepCfg::IResourceLoader > p = 
 		DepCfg::CreateInternalInterface< DepCfg::IResourceLoader >(
 #ifdef DEPCFGLITE
 		RESOURCE_DLL_INTERFACE
@@ -190,7 +190,7 @@ void CDepCfgWnd::OnPTZ(LONG id,             // camera id
                      LPCWSTR state        // new state
                      ) 
 {
-	boost::shared_ptr< DepCfg::IResourceLoader > p = 
+	std::shared_ptr< DepCfg::IResourceLoader > p = 
 		DepCfg::CreateInternalInterface< DepCfg::IResourceLoader >(
 #ifdef DEPCFGLITE
 		RESOURCE_DLL_INTERFACE
@@ -218,7 +218,7 @@ void CDepCfgWnd::OnComputer(LPCWSTR name,   // computer name
                           LPCWSTR state   // new state
                           ) 
 {
-	boost::shared_ptr< DepCfg::IResourceLoader > p = 
+	std::shared_ptr< DepCfg::IResourceLoader > p = 
 		DepCfg::CreateInternalInterface< DepCfg::IResourceLoader >(
 #ifdef DEPCFGLITE
 		RESOURCE_DLL_INTERFACE

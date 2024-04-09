@@ -175,10 +175,10 @@ void	GuiSlave::SetProperties(PropertyCB* pPropCB)
 #endif
 }
 
-void GuiSlave::OnPropertyChange(CString Name, const boost::any& Value) 
+void GuiSlave::OnPropertyChange(CString Name, const std::any& Value) 
 {
 #ifndef DEPCFGLITE
-	CString str = boost::any_cast<CString>(Value);
+	CString str = std::any_cast<CString>(Value);
 //	AfxMessageBox( str );
 
 	SlaveSettings* ss = m_DB.GetSlave( GetID() );
@@ -293,7 +293,7 @@ void	GuiSlave::SetReadOnlyProperty(ReadOnlyProperty* pROP)
 	sp.SetReadOnlyProperties(  *ss, pROP );	
 
 #else
-	boost::shared_ptr< DepCfg::IResourceLoader > p = 
+	std::shared_ptr< DepCfg::IResourceLoader > p = 
 		DepCfg::CreateInternalInterface< DepCfg::IResourceLoader >(
 		RESOURCE_DLL_INTERFACE
 		);

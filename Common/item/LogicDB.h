@@ -13,7 +13,6 @@
 
 #include <vector>
 #include <set>
-#include <boost/shared_ptr.hpp>
 #include "Exception.h"
 #include "LogicReport.h"
 
@@ -300,8 +299,10 @@ public:
 	
 	DWORD			GetConnection(DWORD dwID, DWORD dwSlot) const;
 
-	DWORD			GetFreeComputerSlot(DWORD dwID) const throw(ConnectionException);
-	DWORD			GetFreeCommutatorSlot(DWORD dwID) const throw(ConnectionException);
+	//  throw(ConnectionException)
+	DWORD			GetFreeComputerSlot(DWORD dwID) const;
+	//  throw(ConnectionException)
+	DWORD			GetFreeCommutatorSlot(DWORD dwID) const;
 
 	DWORD			GetCommutatorSlotNumber(DWORD dwID) const; 
 	

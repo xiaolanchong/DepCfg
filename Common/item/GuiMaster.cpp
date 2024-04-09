@@ -182,10 +182,10 @@ void	GuiMaster::SetProperties(PropertyCB* pPropCB)
 #endif
 }
 
-void GuiMaster::OnPropertyChange(CString Name, const boost::any& Value) 
+void GuiMaster::OnPropertyChange(CString Name, const std::any& Value) 
 {
 #ifndef DEPCFGLITE
-	CString str = boost::any_cast<CString>(Value);
+	CString str = std::any_cast<CString>(Value);
 
 	MasterSettings *itr = m_DB.GetMaster( GetID() );
 
@@ -249,7 +249,7 @@ void	GuiMaster::SetReadOnlyProperty(ReadOnlyProperty* pROP)
 	}
 	else
 	{
-		boost::shared_ptr< DepCfg::IResourceLoader > p = 
+		std::shared_ptr< DepCfg::IResourceLoader > p = 
 			DepCfg::CreateInternalInterface< DepCfg::IResourceLoader >(
 			RESOURCE_DLL_INTERFACE
 			);

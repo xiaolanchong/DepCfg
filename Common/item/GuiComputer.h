@@ -35,7 +35,7 @@ public:
 	virtual void					SetProperties( PropertyCB* pPropCB ) ;
 	virtual void					SetReadOnlyProperty(ReadOnlyProperty* pROP);
 private:
-	virtual void					OnPropertyChange(CString Name, const boost::any& Value) ;
+	virtual void					OnPropertyChange(CString Name, const std::any& Value) ;
 	virtual std::set<DWORD>			OnDeleteItem() const ;
 };
 

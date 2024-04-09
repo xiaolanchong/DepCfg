@@ -5,12 +5,11 @@
 
 
 #include "stdafx.h"
+#include <algorithm>
 #include "ProjectDB.h"
 
 #include "GuiComputer.h"
 #include "GuiConnection.h"
-
-#include <boost/bind.hpp>
 
 #ifdef _DEBUG
 #undef THIS_FILE
@@ -78,7 +77,7 @@ void	CGuiDB::DrawUncached(Graphics& gr, const Zoom& zoom)	const
 
 void	CGuiDB::Invalidate( CSize size)
 {
-/*	m_Cache = boost::shared_ptr<Bitmap>
+/*	m_Cache = std::shared_ptr<Bitmap>
 		(
 		::new Bitmap( size.cx, size.cy, PixelFormat24bppRGB  ), Helper::Deleter<Bitmap>()
 		);*/
@@ -105,7 +104,7 @@ void	CGuiDB::Invalidate()
 
 void CGuiDB::AddItem( GuiItem* pItem )
 {
-	m_GuiDB.push_back( boost::shared_ptr<GuiItem>( pItem ) );
+	m_GuiDB.push_back( std::shared_ptr<GuiItem>( pItem ) );
 #ifndef DEPCFGLITE
 	Invalidate();
 #endif
@@ -138,7 +137,7 @@ void	CGuiDB::RedrawMemDC() const
 	CBrush * pOldBrush = (CBrush*)m_Cache.dc.SelectStockObject( NULL_BRUSH );
 	CPen* pOldPen = (CPen*)m_Cache.dc.SelectObject( &pen );
 	
-	std::set< boost::shared_ptr<GuiItem> >::const_iterator itr = m_CurItems.begin();
+	std::set< std::shared_ptr<GuiItem> >::const_iterator itr = m_CurItems.begin();
 	for( ; itr != m_CurItems.end(); ++itr)
 	{
 		(*itr)->DrawReversable( &m_Cache.dc, m_Zoom );
@@ -160,7 +159,7 @@ void	CGuiDB::DrawMemDC() const
 	CBrush * pOldBrush = (CBrush*)m_Cache.dc.SelectStockObject( NULL_BRUSH );
 	CPen* pOldPen = (CPen*)m_Cache.dc.SelectObject( &pen );
 	
-	std::set< boost::shared_ptr<GuiItem> >::const_iterator itr = m_CurItems.begin();
+	std::set< std::shared_ptr<GuiItem> >::const_iterator itr = m_CurItems.begin();
 	for( ; itr != m_CurItems.end(); ++itr)
 	{
 		(*itr)->DrawReversable( &m_Cache.dc, m_Zoom );
@@ -195,7 +194,7 @@ bool	CGuiDB::StartAction(PointF point)
 //	InterPoint = point;
 	DBList_t::iterator itr = m_GuiDB.begin();
 	m_ptPrev = point;
-	boost::shared_ptr<GuiItem> Current;
+	std::shared_ptr<GuiItem> Current;
 	for( ; itr != m_GuiDB.end(); ++itr)
 	{
 		GuiItem::Action act = (*itr)->GetAction( point  ) ;
@@ -205,7 +204,7 @@ bool	CGuiDB::StartAction(PointF point)
 		case GuiItem::resize:
 			{
 				//! забросим элемент наверх, чтобы отрисовывался поверх всех
-			boost::shared_ptr<GuiItem> pItem = *itr; 
+			std::shared_ptr<GuiItem> pItem = *itr; 
 			m_GuiDB.erase(itr);
 			m_GuiDB.push_front( pItem );
 			itr = m_GuiDB.begin();
@@ -223,7 +222,7 @@ bool	CGuiDB::StartAction(PointF point)
 					if(s.find( (*itr)->GetID() ) != s.end()) 
 					{
 						//! также забрасываем все соединенные элементы наверх
-						boost::shared_ptr<GuiItem> pItem = *itr; 
+						std::shared_ptr<GuiItem> pItem = *itr; 
 						DBList_t::iterator itAfter = m_GuiDB.erase(itr);
 						m_GuiDB.push_front( pItem );
 						itr = m_GuiDB.begin();
@@ -246,7 +245,7 @@ bool	CGuiDB::StartAction(PointF point)
 			{
 			std::pair<bool, DWORD> p = (*itr)->SlotFromPoint(  point );
 			PointF ptSlot = (*itr)->PointFromSlot(p.second);
-			Current = boost::shared_ptr<GuiItem>( new GuiLine(m_DB, (*itr)->GetID(), p.second, ptSlot, point) );
+			Current = std::shared_ptr<GuiItem>( new GuiLine(m_DB, (*itr)->GetID(), p.second, ptSlot, point) );
 			m_CurItems.insert( Current );
 			UnselectAll();
 			(*itr)->SetState(GuiItem::highlighted);
@@ -284,7 +283,7 @@ void	CGuiDB::DoAction(PointF pt)
 		RedrawMemDC();
 #endif
 		std::for_each( m_CurItems.begin(), m_CurItems.end(), 
-			boost::bind(&GuiItem::DoAction, _1, size) ); 
+			[size](auto item) { item->DoAction(size); });
 #ifdef DEPCFGLITE
 		DrawMemDC();
 #else
@@ -337,7 +336,7 @@ void	CGuiDB::EndAction(PointF point)
 	if( !m_CurItems.empty() ) 
 	{
 		std::for_each( m_CurItems.begin(), m_CurItems.end(), 
-			boost::bind(&GuiItem::EndAction, _1, point) ); 
+			[point](auto item) { item->EndAction(point); });
 	//	m_Cur->EndAction(point);
 		GuiLine * pLine = dynamic_cast<GuiLine*>( m_CurItems.begin()->get() );
 
@@ -361,7 +360,7 @@ void	CGuiDB::EndAction(PointF point)
 					{
 						m_DB.AddConnection( c );
 						GuiConnection* p = new GuiConnection( *this, c.GetID());
-						m_GuiDB.push_back( boost::shared_ptr<GuiItem>(p));
+						m_GuiDB.push_back( std::shared_ptr<GuiItem>(p));
 						m_pDoc->SetModifiedFlag();
 						
 						break;
@@ -384,7 +383,7 @@ void	CGuiDB::CancelAction()
 	{
 	//	m_Cur->CancelAction();
 		std::for_each( m_CurItems.begin(), m_CurItems.end(), 
-			boost::mem_fn(&GuiItem::CancelAction) ); 
+			[](auto item) { item->CancelAction(); });
 	}
 #ifndef DEPCFGLITE
 	Invalidate();

@@ -426,7 +426,7 @@ void COXDragDockContext::DrawFocusRect(BOOL bRemoveRect)
 	
     if (
 #if _MSC_VER > 1200
-		afxData.bWin95
+		false
 #else
 		afxData.bWin4 
 #endif

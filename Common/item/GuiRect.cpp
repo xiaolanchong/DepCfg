@@ -21,7 +21,7 @@ static char THIS_FILE[]=__FILE__;
 
 CStringW	GuiRect::LoadStringInt( UINT nID )
 {
-	boost::shared_ptr< DepCfg::IResourceLoader > p = 
+	std::shared_ptr< DepCfg::IResourceLoader > p = 
 		DepCfg::CreateInternalInterface< DepCfg::IResourceLoader >(
 #ifdef DEPCFGLITE
 		RESOURCE_DLL_INTERFACE
