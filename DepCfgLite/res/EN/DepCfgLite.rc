@@ -1,0 +1,290 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "../resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_INFO_OBJECT         ICON                    "res\\Info1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,7,0,137
+ PRODUCTVERSION 1,7,0,137
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Orwell2K configuration's reader and visualiser"
+            VALUE "CompanyName", "ElVEES"
+            VALUE "FileDescription", "DepCfgLite Dynamic Link Library"
+            VALUE "FileVersion", "1, 7, 0, 137"
+            VALUE "InternalName", "DepCfgLite"
+            VALUE "LegalCopyright", "Copyright © ElVEES, 2004-2005"
+            VALUE "OriginalFilename", "DepCfgLite.DLL"
+            VALUE "ProductName", "DepCfgLite Dynamic Link Library"
+            VALUE "ProductVersion", "1, 7, 0, 137"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_SOCKETS_INIT_FAILED "Ошибка инициализации сокетов"
+    IDS_XML_ERROR           "Ошибка входного файла"
+    IDS_PROP_STATE          "Состояние"
+    IDS_PROP_PTZSTATE       "Состояние PTZ"
+    IDS_PROP_NODATA         "Нет данных"
+    IDS_PROP_STATE_STOPPED  "Временно не работает, происходит перезагрузка"
+    IDS_PROP_STATE_INIT     "Временно не работает, происходит перезагрузка"
+    IDS_PROP_STATE_ERROR    "Поток захвата с камеры не может стартовать"
+    IDS_PROP_STATE_NOIMAGE  "Нет сигнала с камеры или не запущен видеосервер"
+    IDS_PROP_STATE_BLIND    "Вмешательство в коммуникации!"
+    IDS_PROP_STATE_OK       "Ok"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PROP_PTZSTATE_OK    "Ok"
+    IDS_PROP_PTZSTATE_NOTCONNECTED "Нет подключения к ВидеоСерверу"
+    IDS_PROP_PTZSTATE_FAILED "Последняя команда не выполнена"
+    IDS_PROP_PTZSTATE_TIMEOUT 
+                            "Последняя команда не выполнена по истечении времени"
+    IDS_PROP_IP             "IP адрес"
+    IDS_PROP_COMP_ONLINE    "Online"
+    IDS_PROP_COMP_BATTERY   "Работает от ИБП"
+    IDS_PROP_COMP_OFFLINE   "Выключен"
+    IDS_PROP_STATE_UNKNOWN  "Нет информации"
+    IDS_LIST_TIME           "Apper"
+    IDS_LIST_INFO           "Информация"
+    IDS_COLUMN_TIME         "Время появления"
+    IDS_COLUMN_OBJECT       "Цель"
+    IDS_COLUMN_INFO         "Информация о появлении"
+    IDS_EVENT_CAMERA        "Камера %d"
+    IDS_EVENT_COMPUTER      "Компьютер %s"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_EVENT_PTZ           "PTZ %d"
+    IDS_PROP_COMPUTER_DNS_NAME "DNS имя"
+    IDS_PROP_COMPUTER_IP    "IP адрес"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_INFO_OBJECT         ICON                    "res\\Info1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,7,0,137
+ PRODUCTVERSION 1,7,0,137
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Orwell2K configuration's reader and visualiser"
+            VALUE "CompanyName", "ElVEES"
+            VALUE "FileDescription", "DepCfgLite Dynamic Link Library"
+            VALUE "FileVersion", "1, 7, 0, 137"
+            VALUE "InternalName", "DepCfgLite"
+            VALUE "LegalCopyright", "Copyright © ElVEES, 2004-2005"
+            VALUE "OriginalFilename", "DepCfgLite.DLL"
+            VALUE "ProductName", "DepCfgLite Dynamic Link Library"
+            VALUE "ProductVersion", "1, 7, 0, 137"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "../resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+    IDS_XML_ERROR           "Input file error"
+    IDS_PROP_STATE          "State"
+    IDS_PROP_PTZSTATE       "PTZ state"
+    IDS_PROP_NODATA         "No data"
+    IDS_PROP_STATE_STOPPED  "Temporarily not work, restart pending"
+    IDS_PROP_STATE_INIT     "Temporarily not work, restart pending"
+    IDS_PROP_STATE_ERROR    "Camera thread can't start (mostly)"
+    IDS_PROP_STATE_NOIMAGE  "No image from video server or no signal from camera"
+    IDS_PROP_STATE_BLIND    "Some kind of violation in environment"
+    IDS_PROP_STATE_OK       "Ok"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PROP_PTZSTATE_OK    "Ok"
+    IDS_PROP_PTZSTATE_NOTCONNECTED "Not connected to video server"
+    IDS_PROP_PTZSTATE_FAILED "Last operation failed"
+    IDS_PROP_PTZSTATE_TIMEOUT "Last operation failed by timeout"
+    IDS_PROP_IP             "IP adress"
+    IDS_PROP_COMP_ONLINE    "Online"
+    IDS_PROP_COMP_BATTERY   "Running on battery"
+    IDS_PROP_COMP_OFFLINE   "Offline"
+    IDS_PROP_STATE_UNKNOWN  "Unknown"
+    IDS_LIST_TIME           "Apper"
+    IDS_LIST_INFO           "Information"
+    IDS_COLUMN_TIME         "Appearance Time"
+    IDS_COLUMN_OBJECT       "Object"
+    IDS_COLUMN_INFO         "Appearance Information"
+    IDS_EVENT_CAMERA        "Camera %d"
+    IDS_EVENT_COMPUTER      "Computer %s"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_EVENT_PTZ           "PTZ %d"
+    IDS_PROP_COMPUTER_DNS_NAME "DNS name"
+    IDS_PROP_COMPUTER_IP    "IP address"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,1028 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "../resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "../OXDockCtrlBarRes.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_IL_TABVIEWS         BITMAP                  "il_tabvi.bmp"
+IDR_ITEM                BITMAP                  "toolbar1.bmp"
+IDR_MAINFRAME           BITMAP                  "Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SETTINGS DIALOG  0, 0, 208, 127
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+	DEFPUSHBUTTON	"OK",IDOK,149,7,52,14
+	PUSHBUTTON	"Cancel",IDCANCEL,149,27,52,14
+    EDITTEXT        IDC_SERVER,7,21,125,14,ES_UPPERCASE | ES_AUTOHSCROLL | 
+                    WS_GROUP
+    EDITTEXT        IDC_DATABASE,7,50,125,14,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_EDIT_DIRECTORY,7,78,125,14,ES_AUTOHSCROLL
+	LTEXT	"Database name",IDC_STATIC,7,36,125,8
+	LTEXT	"SQL server name",IDC_STATIC,7,7,128,11
+	LTEXT	"Shared directory",IDC_STATIC,7,66,125,11
+	LTEXT	"Video standard",IDC_STATIC,7,95,125,13,SS_CENTERIMAGE
+    COMBOBOX        IDC_VIDEO_STANDARD,7,108,125,48,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Depployment Configurator"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,12,11,20,20
+	LTEXT	"Orwell2K Deployment Configurator",IDC_STATIC,38,10,119,
+                    8,SS_NOPREFIX
+	LTEXT	"Copyright © ElVEES, 2004-2005",IDC_STATIC,37,36,119,8
+	DEFPUSHBUTTON	"OK",IDOK,178,7,50,14,WS_GROUP
+	LTEXT	"Version",IDC_VERSION,38,23,74,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 201
+        VERTGUIDE, 132
+        VERTGUIDE, 149
+        VERTGUIDE, 201
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+        HORZGUIDE, 21
+        HORZGUIDE, 34
+        HORZGUIDE, 50
+        HORZGUIDE, 62
+        HORZGUIDE, 78
+        HORZGUIDE, 95
+        HORZGUIDE, 108
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_ITEM TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_ITEM_COMPUTER
+    BUTTON      ID_ITEM_COMMUTATOR
+    BUTTON      ID_ITEM_MASTER
+    BUTTON      ID_ITEM_SLAVE
+END
+
+IDR_MAINFRAME TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_FILE_DB_SAVE
+    BUTTON      ID_FILE_DB_LOAD
+    SEPARATOR
+    BUTTON      ID_SCALE
+    SEPARATOR
+    BUTTON      ID_DELETE_ITEM
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "DepCfg.ico"
+IDR_DEPCFGTYPE          ICON                    "DepCfgDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+POPUP "&File"
+BEGIN
+MENUITEM "&New\tCtrl+N", ID_FILE_NEW
+MENUITEM "&Open...\tCtrl+O", ID_FILE_OPEN
+MENUITEM "Open From Database", ID_FILE_DB_LOAD
+MENUITEM "&Save\tCtrl+S", ID_FILE_SAVE
+MENUITEM "Save &As...", ID_FILE_SAVE_AS
+MENUITEM "Save To Database", ID_FILE_DB_SAVE
+        MENUITEM SEPARATOR
+MENUITEM "Recent File", ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+MENUITEM "E&xit", ID_APP_EXIT
+END
+POPUP "&View"
+BEGIN
+MENUITEM "&Toolbar", ID_VIEW_TOOLBAR
+MENUITEM "&Item Bar", ID_VIEW_ITEM
+MENUITEM "&Status Bar", ID_VIEW_STATUS_BAR
+MENUITEM "&Property Bar", ID_VIEW_PROPERTY
+END
+POPUP "&Help"
+BEGIN
+MENUITEM "&About DepCfg...", ID_APP_ABOUT
+END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_FILE_EXPORT,         VIRTKEY, CONTROL, NOINVERT
+    "I",            ID_FILE_IMPORT,         VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+
+
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,11,0,619
+ PRODUCTVERSION 1,11,0,619
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "ElVEES"
+            VALUE "FileDescription", "Orwell2k deployment configuration editor"
+            VALUE "FileVersion", "1, 11, 0, 619"
+            VALUE "InternalName", "DepCfg"
+            VALUE "LegalCopyright", "Copyright (C) ElVEES, 2004-2005"
+            VALUE "OriginalFilename", "DepCfg.exe"
+            VALUE "ProductName", "DepCfg"
+            VALUE "ProductVersion", "1, 11, 0, 619"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+	IDR_MAINFRAME "Deployment Configurator\n\nDeployment Configurator\nDeployment configuration(*.dep)\n.dep\nDepCfg.Document\nDepCfg Document"
+END
+
+STRINGTABLE 
+BEGIN
+	AFX_IDS_APP_TITLE "Deployment Configurator"
+	AFX_IDS_IDLEMESSAGE "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_INDICATOR_EXT "EXT"
+	ID_INDICATOR_CAPS "CAP"
+	ID_INDICATOR_NUM "NUM"
+	ID_INDICATOR_SCRL "SCRL"
+	ID_INDICATOR_OVR "OVR"
+	ID_INDICATOR_REC "REC"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_FILE_NEW "Create a new document\nNew"
+	ID_FILE_OPEN "Open an existing document\nOpen"
+	ID_FILE_CLOSE "Close the active document\nClose"
+	ID_FILE_SAVE "Save the active document\nSave"
+	ID_FILE_SAVE_AS "Save the active document with a new name\nSave As"
+	ID_FILE_PAGE_SETUP "Change the printing options\nPage Setup"
+	ID_FILE_PRINT_SETUP "Change the printer and printing options\nPrint Setup"
+	ID_FILE_PRINT "Print the active document\nPrint"
+	ID_FILE_PRINT_PREVIEW "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_APP_ABOUT "Display program information, version number and copyright\nAbout"
+	ID_APP_EXIT "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_FILE_MRU_FILE1 "Open this document"
+	ID_FILE_MRU_FILE2 "Open this document"
+	ID_FILE_MRU_FILE3 "Open this document"
+	ID_FILE_MRU_FILE4 "Open this document"
+	ID_FILE_MRU_FILE5 "Open this document"
+	ID_FILE_MRU_FILE6 "Open this document"
+	ID_FILE_MRU_FILE7 "Open this document"
+	ID_FILE_MRU_FILE8 "Open this document"
+	ID_FILE_MRU_FILE9 "Open this document"
+	ID_FILE_MRU_FILE10 "Open this document"
+	ID_FILE_MRU_FILE11 "Open this document"
+	ID_FILE_MRU_FILE12 "Open this document"
+	ID_FILE_MRU_FILE13 "Open this document"
+	ID_FILE_MRU_FILE14 "Open this document"
+	ID_FILE_MRU_FILE15 "Open this document"
+	ID_FILE_MRU_FILE16 "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_NEXT_PANE "Switch to the next window pane\nNext Pane"
+	ID_PREV_PANE "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_WINDOW_SPLIT "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_EDIT_CLEAR "Erase the selection\nErase"
+	ID_EDIT_CLEAR_ALL "Erase everything\nErase All"
+	ID_EDIT_COPY "Copy the selection and put it on the Clipboard\nCopy"
+	ID_EDIT_CUT "Cut the selection and put it on the Clipboard\nCut"
+	ID_EDIT_FIND "Find the specified text\nFind"
+	ID_EDIT_PASTE "Insert Clipboard contents\nPaste"
+	ID_EDIT_REPEAT "Repeat the last action\nRepeat"
+	ID_EDIT_REPLACE "Replace specific text with different text\nReplace"
+	ID_EDIT_SELECT_ALL "Select the entire document\nSelect All"
+	ID_EDIT_UNDO "Undo the last action\nUndo"
+	ID_EDIT_REDO "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_VIEW_TOOLBAR "Show or hide the toolbar\nToggle ToolBar"
+	ID_VIEW_STATUS_BAR "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+	AFX_IDS_SCSIZE "Change the window size"
+	AFX_IDS_SCMOVE "Change the window position"
+	AFX_IDS_SCMINIMIZE "Reduce the window to an icon"
+	AFX_IDS_SCMAXIMIZE "Enlarge the window to full size"
+	AFX_IDS_SCNEXTWINDOW "Switch to the next document window"
+	AFX_IDS_SCPREVWINDOW "Switch to the previous document window"
+	AFX_IDS_SCCLOSE "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+	AFX_IDS_SCRESTORE "Restore the window to normal size"
+	AFX_IDS_SCTASKLIST "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+	AFX_IDS_PREVIEW_CLOSE "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+	IDS_XML_ERROR "Invalid or corrupted file"
+	IDS_REGISTRYKEY "ElVEES"
+	IDS_EXC_IMPORT_MAIN "[Main] - no such section"
+	IDS_EXC_IMPORT_CAMNUM "No camera number in [Main]"
+	IDS_EXC_IMPORT_CLSNUM "No cluster number in [Main]"
+	IDS_EXC_IMPORT_COMSEC "[Commutator%d] - no such section"
+	IDS_EXC_IMPORT_CAMSEC "[Camera%d] - no such section"
+	IDS_EXC_IMPORT_CAMTYPE "Camera%d::CameraType - no such value"
+	IDS_XML_VERSION_ERROR "File version is newer than expected, update program"
+	IDS_PROP_CAMERA_ID "Camera ID"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_ITEM_COMPUTER "Add computer\nComputer"
+	ID_ITEM_COMMUTATOR "Add commutator\nCommutator"
+	ID_ITEM_MASTER "Add master camera\nMaster camera"
+	ID_ITEM_SLAVE "Add slave camera\nSlave camera"
+	ID_SCALE_COMBOBOX "Scale workspace\nScale workspace"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_VIEW_PROPERTY "Show or hide the property bar\nToggle the property bar"
+	ID_VIEW_ITEM "Show or hide the item bar\nToggle the item bar"
+	ID_DELETE_ITEM "Delete selected item\nDelete item"
+	ID_FILE_DB_SAVE "Save the configuration to the database\nSave to the database"
+	ID_FILE_DB_LOAD "Load configuration from the database\nLoad from the database"
+END
+
+STRINGTABLE 
+BEGIN
+	IDS_PROP_CAPTURE_PIN "Capture pin"
+	IDS_PROP_ENABLE_ARCHIVE_DATA "Enable archive data"
+	IDS_PROP_ENABLE_DATAWARE "Enable dataware"
+	IDS_PROP_PTZ_DEVICE "PTZ device"
+	IDS_PROP_COM_NAME "Name"
+	IDS_PROP_COM_DELAY "Delay"
+	IDS_PROP_COM_MASTER_DELAY "MasterDelay"
+	IDS_PROP_COM_EMPTY_MASTER_DELAY "EmptyMasterDelay"
+	IDS_PROP_COM_PREDICTION_TIME "PredictionTime"
+	IDS_PROP_COM_IP "ServerIP"
+	IDS_CAPTION_MASTER_FORMAT "Master camera %d"
+	IDS_PROP_COMPUTER_IP "IP Address"
+	IDS_PROP_PTZ_DEVICE_0 "Panasonic 860"
+	IDS_PROP_PTZ_DEVICE_1 "ElVEES PKT"
+END
+
+STRINGTABLE 
+BEGIN
+	IDS_PROP_RS485_ID "RS485 ID"
+END
+
+STRINGTABLE 
+BEGIN
+	IDS_PROP_PTZ_DEVICE_2 "Pelco (D protocol)"
+	IDS_FMT_COMPUTER_REPORT_1 "Computer %s::Slot%d - different PTZDevice value"
+	IDS_VIDEO_STANDARD_0 "NTSC"
+	IDS_VIDEO_STANDARD_1 "PAL"
+	IDS_FMT_PROJECT_REPORT_0 "Project settings - empty SQL server name"
+	IDS_FMT_PROJECT_REPORT_1 "Project settings - empty database name"
+	IDS_FMT_PROJECT_REPORT_2 "Project settings - empty shared directory"
+	IDS_FMT_PROJECT_REPORT_3 "Project settings - empty video standard"
+	IDS_FMT_COMMUTATOR_REPORT_0 "Commutator %s - empty ServerIP value"
+	IDS_FMT_COMMUTATOR_REPORT_1 "Commutator %s - empty Delay value"
+	IDS_FMT_COMMUTATOR_REPORT_2 "Commutator %s - empty MasterDelay value"
+	IDS_FMT_COMMUTATOR_REPORT_3 "Commutator %s - empty EmptyMasterDelay value"
+	IDS_FMT_COMMUTATOR_REPORT_4 "Commutator %s - empty PredictionTime value"
+	IDS_FMT_MASTER_REPORT_0 "Master %d - empty Capture pin value"
+	IDS_FMT_MASTER_REPORT_1 "Master %d - empty Capture B/W value"
+	IDS_FMT_MASTER_REPORT_2 "Master %d - empty Enable archive value"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_SETTINGS "Edits the workspace settings"
+END
+
+STRINGTABLE 
+BEGIN
+	IDS_FMT_MASTER_REPORT_3 "Master %d - empty Enable dataware value"
+	IDS_FMT_SLAVE_REPORT_0 "Slave %d - empty Capture pin value"
+	IDS_FMT_SLAVE_REPORT_1 "Slave %d - empty Capture B/W value"
+	IDS_FMT_SLAVE_REPORT_2 "Slave %d - empty PKT Device value"
+	IDS_FMT_SLAVE_REPORT_3 "Slave %d - empty RS485ID value"
+	IDS_PROP_CAPTURE_BW "Capture B/W"
+	IDS_ERR_EXPORT_CAPTION "Configuration errors"
+	IDS_FMT_COMMUTATOR_REPORT_5 "One of commutators is unnamed"
+	IDS_FMT_MASTER_REPORT_4 "One of masters is unnamed"
+END
+
+STRINGTABLE 
+BEGIN
+	IDS_FMT_SLAVE_REPORT_4 "One of slaves is unnamed"
+	IDS_FMT_COMPUTER_REPORT_2 "One of computers is unnamed"
+	IDS_PAGE_LOGIC "Logic"
+	IDS_PAGE_PHYSIC "Physic"
+	IDS_FIT_TO "Fit To"
+	IDS_PROP_COMPUTER_DNS_NAME "DNS name"
+	IDS_FMT_COMMUTATOR_NAME "Cl%d"
+	IDS_FMT_COMPUTER_REPORT_3 "Computer %s - empty DNS name property"
+END
+
+STRINGTABLE 
+BEGIN
+	IDS_MRC_STARTDOCKING "Press Ctrl to prevent docking\n"
+	ID_MRC_ALLOWDOCKING "Allow docking"
+	ID_MRC_HIDE "Hide"
+	ID_MRC_MDIFLOAT "Float as MDI Window"
+END
+
+STRINGTABLE 
+BEGIN
+	IDS_PROP_PTZ_DEVICE_3 "Panasonic 960"
+	IDS_EMPTY "<empty>"
+	IDS_TRUE "Yes"
+	IDS_FALSE "No"
+	IDS_DB_CONNECTION "Failed to connect to the database"
+	IDS_DB_SAVE "Failed to save the configuration"
+	IDS_DB_CAMERAS "Some cameras are not connected"
+	IDS_DB_LOAD "Failed to load the configuration"
+	IDS_DB_SAVE_OK "The operation completed successfully"
+	IDS_FMT_MASTER_NO_COMP_CONNECTION "Master %d - no connection with a computer "
+	IDS_FMT_MASTER_NO_COMM_CONNECTION "Master %d - no connection with a commutator"
+	IDS_FMT_SLAVE_NO_COMP_CONNECTION "Slave %d - no connection with a computer "
+	IDS_FMT_SLAVE_NO_COMM_CONNECTION "Slave %d - no connection with a commutator"
+END
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "../resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""../OXDockCtrlBarRes.h""\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "#include ""DepCfg.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+#endif    // English (U.S.) resources
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_IL_TABVIEWS         BITMAP                  "il_tabvi.bmp"
+IDR_ITEM                BITMAP                  "toolbar1.bmp"
+IDR_MAINFRAME           BITMAP                  "Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SETTINGS DIALOG  0, 0, 208, 127
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Установки"
+FONT 8, "MS Sans Serif"
+BEGIN
+	DEFPUSHBUTTON	"OK",IDOK,149,7,52,14
+	PUSHBUTTON	"Отмена",IDCANCEL,149,27,52,14
+    EDITTEXT        IDC_SERVER,7,21,125,14,ES_UPPERCASE | ES_AUTOHSCROLL | 
+                    WS_GROUP
+    EDITTEXT        IDC_DATABASE,7,50,125,14,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_EDIT_DIRECTORY,7,78,125,14,ES_AUTOHSCROLL
+	LTEXT	"Имя базы данных",IDC_STATIC,7,36,125,8
+	LTEXT	"Имя SQL сервера",IDC_STATIC,7,7,128,11
+	LTEXT	"Общая директория",IDC_STATIC,7,66,125,11
+	LTEXT	"Видео стандарт",IDC_STATIC,7,95,125,13,SS_CENTERIMAGE
+    COMBOBOX        IDC_VIDEO_STANDARD,7,108,125,48,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "О программе"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,12,11,20,20
+	LTEXT	"Конфигуратор инсталляций Orwell2K",IDC_STATIC,38,10,119,
+                    8,SS_NOPREFIX
+	LTEXT	"Копирайт © ЭЛВИС, 2004-2005",IDC_STATIC,37,36,119,8
+	DEFPUSHBUTTON	"OK",IDOK,178,7,50,14,WS_GROUP
+	LTEXT	"Версия ",IDC_VERSION,38,23,74,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 201
+        VERTGUIDE, 132
+        VERTGUIDE, 149
+        VERTGUIDE, 201
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+        HORZGUIDE, 21
+        HORZGUIDE, 34
+        HORZGUIDE, 50
+        HORZGUIDE, 62
+        HORZGUIDE, 78
+        HORZGUIDE, 95
+        HORZGUIDE, 108
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_ITEM TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_ITEM_COMPUTER
+    BUTTON      ID_ITEM_COMMUTATOR
+    BUTTON      ID_ITEM_MASTER
+    BUTTON      ID_ITEM_SLAVE
+END
+
+IDR_MAINFRAME TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_FILE_DB_SAVE
+    BUTTON      ID_FILE_DB_LOAD
+    SEPARATOR
+    BUTTON      ID_SCALE
+    SEPARATOR
+    BUTTON      ID_DELETE_ITEM
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "DepCfg.ico"
+IDR_DEPCFGTYPE          ICON                    "DepCfgDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+POPUP "&Файл"
+BEGIN
+MENUITEM "&Новый\tCtrl+N", ID_FILE_NEW
+MENUITEM "&Открыть..\tCtrl+O", ID_FILE_OPEN
+MENUITEM "Открыть из БД", ID_FILE_DB_LOAD
+MENUITEM "&Сохранить\tCtrl+S", ID_FILE_SAVE
+MENUITEM "Со&хранить как...", ID_FILE_SAVE_AS
+MENUITEM "Сохранить в БД", ID_FILE_DB_SAVE
+        MENUITEM SEPARATOR
+MENUITEM "Недавний файл", ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+MENUITEM "Вы&xод", ID_APP_EXIT
+END
+POPUP "&Вид"
+BEGIN
+MENUITEM "&Панель инструментов", ID_VIEW_TOOLBAR
+MENUITEM "&Панель компонентов", ID_VIEW_ITEM
+MENUITEM "&Панель статуса", ID_VIEW_STATUS_BAR
+MENUITEM "&Панель свойств", ID_VIEW_PROPERTY
+END
+POPUP "&Помощь"
+BEGIN
+MENUITEM "&О программе...", ID_APP_ABOUT
+END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_FILE_EXPORT,         VIRTKEY, CONTROL, NOINVERT
+    "I",            ID_FILE_IMPORT,         VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+
+
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,11,0,619
+ PRODUCTVERSION 1,11,0,619
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "ElVEES"
+            VALUE "FileDescription", "Orwell2k deployment configuration editor"
+            VALUE "FileVersion", "1, 11, 0, 619"
+            VALUE "InternalName", "DepCfg"
+            VALUE "LegalCopyright", "Copyright (C) ElVEES, 2004-2005"
+            VALUE "OriginalFilename", "DepCfg.exe"
+            VALUE "ProductName", "DepCfg"
+            VALUE "ProductVersion", "1, 11, 0, 619"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+	IDR_MAINFRAME "Конфигуратор Orwell2k\n\nКонфигуратор Orwell2k\nКонфигурация Orwell2k(*.dep)\n.dep\nDepCfg.Document\nDepCfg Document"
+END
+
+STRINGTABLE 
+BEGIN
+	AFX_IDS_APP_TITLE "Конфигуратор Orwell2k"
+	AFX_IDS_IDLEMESSAGE "Готов"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_INDICATOR_EXT "EXT"
+	ID_INDICATOR_CAPS "CAP"
+	ID_INDICATOR_NUM "NUM"
+	ID_INDICATOR_SCRL "SCRL"
+	ID_INDICATOR_OVR "OVR"
+	ID_INDICATOR_REC "REC"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_FILE_NEW "Создать новый документ\nНовый"
+	ID_FILE_OPEN "Открыть существующий документ\nОткрыть"
+	ID_FILE_CLOSE "Закрыть текущий документ\nЗакрыть"
+	ID_FILE_SAVE "Сохранить текущий документ\nСохранить"
+	ID_FILE_SAVE_AS "Сохранить текущий документ с новым именем\nСохранить как.."
+	ID_FILE_PAGE_SETUP "Изменить настройки страницы\nНастройка страницы"
+	ID_FILE_PRINT_SETUP "Change the printer and printing options\nPrint Setup"
+	ID_FILE_PRINT "Распечатать текущий документ\nПечать"
+	ID_FILE_PRINT_PREVIEW "Показать превью\nПревью печати"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_APP_ABOUT "Вывести системную информацию о программе\nО программе"
+	ID_APP_EXIT "Выйти из приложения с предложением сохраниться\nВыход"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_FILE_MRU_FILE1 "Open this document"
+	ID_FILE_MRU_FILE2 "Open this document"
+	ID_FILE_MRU_FILE3 "Open this document"
+	ID_FILE_MRU_FILE4 "Open this document"
+	ID_FILE_MRU_FILE5 "Open this document"
+	ID_FILE_MRU_FILE6 "Open this document"
+	ID_FILE_MRU_FILE7 "Open this document"
+	ID_FILE_MRU_FILE8 "Open this document"
+	ID_FILE_MRU_FILE9 "Open this document"
+	ID_FILE_MRU_FILE10 "Open this document"
+	ID_FILE_MRU_FILE11 "Open this document"
+	ID_FILE_MRU_FILE12 "Open this document"
+	ID_FILE_MRU_FILE13 "Open this document"
+	ID_FILE_MRU_FILE14 "Open this document"
+	ID_FILE_MRU_FILE15 "Open this document"
+	ID_FILE_MRU_FILE16 "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_NEXT_PANE "Переключиться на следующий элемент окна\nСледующий элемент"
+	ID_PREV_PANE "Переключиться на предыдующий элемент окна\nПредыдующий элемент"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_WINDOW_SPLIT "Разделить активное окно\nРазделить"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_EDIT_CLEAR "Удалить выделенное\nУдалить"
+	ID_EDIT_CLEAR_ALL "Удалить все\nУдалить все"
+	ID_EDIT_COPY "Скопировать выделенное\nСкопировать"
+	ID_EDIT_CUT "Вырезать выделенное\nВырезать"
+	ID_EDIT_FIND "Найти указанный текст\nНайти"
+	ID_EDIT_PASTE "Вставить содержимое Clipboard\nВставить"
+	ID_EDIT_REPEAT "Повторить последнее действие\nПовторить"
+	ID_EDIT_REPLACE "Заменить конкретный текст на другой\nЗаменить"
+	ID_EDIT_SELECT_ALL "Выделить весь документ\nВыделить все"
+	ID_EDIT_UNDO "Отменить последнее действие\nОтменить"
+	ID_EDIT_REDO "Сделать отмененное действие\nСделать заново"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_VIEW_TOOLBAR "Показать или убрать панель инструментов\nПанель инструментов"
+	ID_VIEW_STATUS_BAR "Показать или убрать панель статуса\nПанель статуса"
+END
+
+STRINGTABLE 
+BEGIN
+	AFX_IDS_SCSIZE "Изменить размер окна"
+	AFX_IDS_SCMOVE "Изменить положение окна"
+	AFX_IDS_SCMINIMIZE "Свернуть окно"
+	AFX_IDS_SCMAXIMIZE "Развернуть окно"
+	AFX_IDS_SCNEXTWINDOW "Переключиться на следующее окно"
+	AFX_IDS_SCPREVWINDOW "Переключиться на предыдущее окно"
+	AFX_IDS_SCCLOSE "Закрыть окно с предложением сохранить изменения"
+END
+
+STRINGTABLE 
+BEGIN
+	AFX_IDS_SCRESTORE "Развернуть окно"
+	AFX_IDS_SCTASKLIST "Включить лист заданий"
+END
+
+STRINGTABLE 
+BEGIN
+	AFX_IDS_PREVIEW_CLOSE "Закрыть режим превью\nОтменить превью"
+END
+
+STRINGTABLE 
+BEGIN
+	IDS_XML_ERROR "Испорченный файл"
+	IDS_REGISTRYKEY "ElVEES"
+	IDS_EXC_IMPORT_MAIN "[Main] - нет такой секции"
+	IDS_EXC_IMPORT_CAMNUM "В [Main] нет номера камеры"
+	IDS_EXC_IMPORT_CLSNUM "В [Main] нет номера кластера"
+	IDS_EXC_IMPORT_COMSEC "[Commutator%d] - нет такой секции"
+	IDS_EXC_IMPORT_CAMSEC "[Camera%d] - нет такой секции"
+	IDS_EXC_IMPORT_CAMTYPE "Camera%d::CameraType - нет такого значения"
+	IDS_XML_VERSION_ERROR "Данный файл более свежей версии, обновите программное обеспечение"
+	IDS_PROP_CAMERA_ID "Camera ID"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_ITEM_COMPUTER "Добавить компьютер\nКомпьютер"
+	ID_ITEM_COMMUTATOR "Добавить коммутатор\nКоммутатор"
+	ID_ITEM_MASTER "Добавить обзорную камеру\nОбзорная камера"
+	ID_ITEM_SLAVE "Добавить поворотную камеру\nПоворотная камера"
+	ID_SCALE_COMBOBOX "Масштабировать рабочее окно\nМасштабировать рабочее окно"
+END
+
+STRINGTABLE 
+BEGIN
+	ID_VIEW_PROPERTY "Вкл/откл показ свойств\nПоказ свойств"
+	ID_VIEW_ITEM "Вкл/Откл панель элементов\nПанель элементов"
+	ID_DELETE_ITEM "Удалить выбранный элемент\nУдалить элемент"
+	ID_FILE_DB_SAVE "Сохранить текущую конфигурацию в БД\nСохранить в БД"
+	ID_FILE_DB_LOAD "Загрузить конфигурацию из БД\nЗагрузить из БД"
+END
+
+STRINGTABLE 
+BEGIN
+	IDS_PROP_CAPTURE_PIN "Capture pin"
+	IDS_PROP_ENABLE_ARCHIVE_DATA "Включить архивацию"
+	IDS_PROP_ENABLE_DATAWARE "Включить dataware"
+	IDS_PROP_PTZ_DEVICE "Устройство PTZ"
+	IDS_PROP_COM_NAME "Имя"
+	IDS_PROP_COM_DELAY "Delay"
+	IDS_PROP_COM_MASTER_DELAY "MasterDelay"
+	IDS_PROP_COM_EMPTY_MASTER_DELAY "EmptyMasterDelay"
+	IDS_PROP_COM_PREDICTION_TIME "PredictionTime"
+	IDS_PROP_COM_IP "IP Сервера"
+	IDS_CAPTION_MASTER_FORMAT "Обзорная камера %d"
+	IDS_PROP_COMPUTER_IP "IP адрес"
+	IDS_PROP_PTZ_DEVICE_0 "Panasonic WV-CS86x"
+	IDS_PROP_PTZ_DEVICE_1 "ElVEES PKT-24"
+END
+
+STRINGTABLE 
+BEGIN
+	IDS_PROP_RS485_ID "RS485 ID"
+END
+
+STRINGTABLE 
+BEGIN
+	IDS_PROP_PTZ_DEVICE_2 "Pelco (D protocol)"
+	IDS_FMT_COMPUTER_REPORT_1 "Computer %s::Slot%d - подключены различные типы поворотных устройств"
+	IDS_VIDEO_STANDARD_0 "NTSC"
+	IDS_VIDEO_STANDARD_1 "PAL"
+	IDS_FMT_PROJECT_REPORT_0 "Свойства проекта - пустое имя SQL сервера"
+	IDS_FMT_PROJECT_REPORT_1 "Свойства проекта - пустое имя базы данных"
+	IDS_FMT_PROJECT_REPORT_2 "Свойства проекта - пустое имя общей директории"
+	IDS_FMT_PROJECT_REPORT_3 "Свойства проекта - пустое поле видео стандарта"
+	IDS_FMT_COMMUTATOR_REPORT_0 "Commutator %s - пустое поле IP адреса"
+	IDS_FMT_COMMUTATOR_REPORT_1 "Commutator %s - пустое поле Delay "
+	IDS_FMT_COMMUTATOR_REPORT_2 "Commutator %s - пустое поле MasterDelay"
+	IDS_FMT_COMMUTATOR_REPORT_3 "Commutator %s - пустое поле EmptyMasterDelay"
+	IDS_FMT_COMMUTATOR_REPORT_4 "Commutator %s - пустое поле PredictionTime "
+	IDS_FMT_MASTER_REPORT_0 "Master %d -пустое поле Capture pin"
+	IDS_FMT_MASTER_REPORT_1 "Master %d -пустое поле Capture B/W "
+	IDS_FMT_MASTER_REPORT_2 "Master %d -пустое поле  Enable archive "
+END
+
+STRINGTABLE 
+BEGIN
+	ID_SETTINGS "Редактировать глобальные настройки"
+END
+
+STRINGTABLE 
+BEGIN
+	IDS_FMT_MASTER_REPORT_3 "Master %d -пустое поле Enable dataware "
+	IDS_FMT_SLAVE_REPORT_0 "Slave %d - пустое поле Capture pin"
+	IDS_FMT_SLAVE_REPORT_1 "Slave %d - пустое поле Capture B/W "
+	IDS_FMT_SLAVE_REPORT_2 "Slave %d - пустое поле PKT Device "
+	IDS_FMT_SLAVE_REPORT_3 "Slave %d - пустое поле RS485ID "
+	IDS_PROP_CAPTURE_BW "Capture B/W"
+	IDS_ERR_EXPORT_CAPTION "Ошибки конфигурации"
+	IDS_FMT_COMMUTATOR_REPORT_5 "У коммутатора нет имени"
+	IDS_FMT_MASTER_REPORT_4 "У обзорной камеры нет имени"
+END
+
+STRINGTABLE 
+BEGIN
+	IDS_FMT_SLAVE_REPORT_4 "У поворотной камеры нет имени"
+	IDS_FMT_COMPUTER_REPORT_2 "У компьютера нет имени"
+	IDS_PAGE_LOGIC "Логический уровень"
+	IDS_PAGE_PHYSIC "Физический уровень"
+	IDS_FIT_TO "Выровнить"
+	IDS_PROP_COMPUTER_DNS_NAME "DNS имя"
+	IDS_FMT_COMMUTATOR_NAME "Кл%d"
+	IDS_FMT_COMPUTER_REPORT_3 "Компьютер %s - пустое DNS имя"
+END
+
+STRINGTABLE 
+BEGIN
+	IDS_MRC_STARTDOCKING "Нажмите Ctrl чтобы предотвратить фиксацию окна\n"
+	ID_MRC_ALLOWDOCKING "Позволить фиксацию окон"
+	ID_MRC_HIDE "Скрыть"
+	ID_MRC_MDIFLOAT "Режим MDI окна"
+END
+
+STRINGTABLE 
+BEGIN
+	IDS_PROP_PTZ_DEVICE_3 "Panasonic 960"
+	IDS_EMPTY "<пусто>"
+	IDS_TRUE "Да"
+	IDS_FALSE "Нет"
+	IDS_DB_CONNECTION "Ошибка при соединении с БД"
+	IDS_DB_SAVE "Не удалось сохранить конфигурацию"
+	IDS_DB_CAMERAS "Некоторые камеры не соединены"
+	IDS_DB_LOAD "Не удалось загрузить конфигурацию"
+	IDS_DB_SAVE_OK "Операция выполнена успешно"
+	IDS_FMT_MASTER_NO_COMP_CONNECTION "Master %d - нет соединения с компьютером"
+	IDS_FMT_MASTER_NO_COMM_CONNECTION "Master %d - нет соединения с коммутатором"
+	IDS_FMT_SLAVE_NO_COMP_CONNECTION "Slave %d - нет соединения с компьютером"
+	IDS_FMT_SLAVE_NO_COMM_CONNECTION "Slave %d - нет соединения с коммутатором"
+END
+
+#endif    // English (U.S.) resources
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+#include "DepCfg.rc2"  // non-Microsoft Visual C++ edited resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED

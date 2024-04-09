@@ -1,0 +1,42 @@
+DepCfgLite DLL 
+
+[*] Fixes
+[+] Features
+[-] Known bugs
+
+2004-08-13 Build 1.0.1.40
+[+] Добавлено 4 конфига - DepCfgLite, DepCfgLited, DepCfgLiteu, DepCfgLiteud
+
+2004-09-21 Build 1.0.2.60
+[+] Вынесены строки форматирования событий и названия колонок списка в ресурсы
+
+2004-09-28 Build 1.0.3
+[*]	fixed resizing bug .Try to resize when scrollbar is visible and drop when not.
+	Internally removed caching when not drag, code was carried from AlarmLink GuiDB and its draw stuff
+	
+2004-12-10 1.1.3
+[+] Добавлен параметр DNS name через который резолвится компьютер
+
+2005-09-18	1.2.0
+[*]	Не все строковые ресурсы на русском
+[+]	исправлен NLS
+
+2005-09-22	1.3.0	
+[+]	См. DepCfg
+
+2005-09-26	1.4.0
+[+]	Функция создания интерфейсов CreateDepInterface
+[+]	Интерфейс обращение к БД IDBSerializer
+[+]	Функция загрузки из БД OpenFromDatabase
+
+2005-09-28	1.5.0
+[*]	Исправлено сохранение конфигурации в БД
+
+2005-09-30	1.6.0
+[*]	Исправлено удаление камер с id>1000000
+[*]	IP & DNS Name подгружались из ехе
+
+2005-11-06	1.7.0
+[+]	строка соединения получается от DBBridge 
+[*]	Ислючение при загрузке из БД
+[+]	Возможность передачи строки соединения
